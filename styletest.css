@@ -1,8 +1,10 @@
 * {
-    margin: 0 !important;
-    padding: 0 !important;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box !important;
   }
+
+
 
  ul {
      list-style: none;
@@ -36,6 +38,7 @@
     margin: 30px 30px;
     border-bottom: 1px solid #F2F2F2;
     padding-bottom: 40px;
+    height: 86px;
 
   }
 
@@ -72,28 +75,47 @@
     background: #F8F8F8;
   }
 
-  .mainNav a {
+  /* .mainNav a {
     float: right;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
+  } */
 
   .rightContainer {
-      display: flex;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+  }
+
+  .rightContainer img {
+    padding-right: 35px;
+  }
+
+  .rightContainer p {
+    color: #FF2288;
+    margin-right: 35px;
   }
 
   .goPro {
      color: #ff2288;
      font-size: 14px;
+     margin-right: 35px;
   }
 
-  .activeButton {
-      background-color: #ff2288;
-      color: #F8F8F8;
-      border-radius: 12px;
-  }
+  .button {
+    border: none;
+    border-radius: 12px;
+    background-color: #FF2288;
+    width: 129px;
+    height: 56px;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+ 
 
   
   .mainContent {
@@ -101,4 +123,215 @@
   overflow: auto; /* key adjustment */
   background-color: #8990eb;
   }
+
+  .sub-menu{
+    grid-area: sub-menu;
+    max-width: 1231px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+.sub{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sub ul{
+    display: flex;
+}
+
+.sub li{
+    padding: 15px;
+}
+
+.sub a{
+    color: #222222;
+}
+
+.sub li:hover{
+    width: auto;
+    height: 40px;
+    background-color: #F2F2F2;
+    border-radius: 12px;
+}
+
+.filter-button{
+    width: 132px;
+    height: 56px;
+    background-color: #FFFFFF;
+    border: 1px solid #D8D8D8;
+    border-radius: 12px;
+}
+
+.filter-img{
+    width: 24px;
+    height: 24px;
+}
+
+.filter-button > img,
+.filter-button > span{
+    vertical-align: middle;
+}
+
+.filter-button span{
+    padding-left: 15px;
+}
+
+.images{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.images img{
+    width: 289px;
+    height: 210px;
+    border-radius: 12px;
+}
+
+.project{
+    position: relative;
+}
+
+.icon{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    display: none;
+}
+
+.icon-2{
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    display: none;
+}
+
+.icon img{
+    width: 24px;
+    height: 24px;
+    background-color: #FFFFFF;
+}
+
+.icon-2 img{
+    width: 24px;
+    height: 24px;
+    background-color: #FFFFFF;
+}
+
+.project:hover .icon{
+    display: block;
+}
+
+.project:hover .icon-2{
+    display: block;
+}
+
+.load{
+    display: flex;
+    justify-content: center;
+}
+
+.more-button{
+    width: 289px;
+    height: 56px;
+    border: 1px solid #F2F2F2;
+    border-radius: 12px;
+    margin-top: 70px;
+}
+
+.top-designers{
+    grid-area: top-designers;
+    max-width: 1231px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 137px;
+    margin-bottom: 129px;
+}
+
+.designer-title{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+} 
+
+.designer-title h2{
+    margin-bottom: 54px;
+}
+
+.designer-title a{
+    color: #222222;
+}
+
+.designer-title a:hover{
+    text-decoration: underline;
+}
+
+.designers{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.designers h5, h6{
+    padding-top: 10px;
+}
+
+.designers h6{
+    padding-bottom: 17px;
+    opacity: 0.6;
+}
+
+.designers button{
+    width: 132px;
+    height: 44px;
+    border: 1px solid #D8D8D8;
+    border-radius: 12px;
+}
+
+footer{
+    grid-area: footer;
+    max-width: 1231px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.top h4{
+    margin-bottom: 36px;
+}
+
+.top li{
+    
+    padding-bottom: 20px;
+}
+
+.top a{
+    color: #222222;
+}
+
+.social img{
+    padding-right: 20px;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 153px;
+    margin-bottom: 40px;
+}
  
