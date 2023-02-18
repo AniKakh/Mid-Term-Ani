@@ -1,0 +1,61 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: auto 0;
+}
+
+.mainNav {
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.mainNav .searchbarContainer {
+    float: left;
+}
+
+.mainNav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+  }
+
+  .mainNav .searchbarContainer button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #F8F8F8;
+    font-size: 17px;
+    cursor: pointer;
+  }
+
+  .mainNav .searchbarContainer button:hover {
+    background: #F8F8F8;
+  }
+
+  .mainNav a {
+    float: right;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .rightContainer {
+      display: flex;
+  }
+
+  .goPro {
+     color: #ff2288;
+     font-size: 14px;
+  }
+
+  .activeButton {
+      background-color: #ff2288;
+      color: #F8F8F8;
+      border-radius: 12px;
+  }
