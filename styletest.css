@@ -19,7 +19,7 @@
     width: 100%;
     margin: auto;
     display: grid;
-  height: 100vh;
+  height: 100%;
   grid-template-columns: 200px 1fr;
   grid-template-rows: 10% 90%;
   grid-template-areas: 
@@ -31,6 +31,7 @@
     grid-area: sideBar;
   background-color: #222222;
   color: #ffffff;
+  width: auto;
   }
   
   header {
@@ -122,6 +123,8 @@
     grid-area: mainContent;
   overflow: auto; /* key adjustment */
   background-color: #8990eb;
+  display: flex;
+  flex-direction: column;
   }
 
   .sub-menu{
@@ -181,20 +184,20 @@
     padding-left: 15px;
 }
 
-.images{
+.offersWrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     text-align: center;
 }
 
-.images img{
+.offersWrapper img{
     width: 289px;
     height: 210px;
     border-radius: 12px;
 }
 
-.project{
+.offers {
     position: relative;
 }
 
@@ -333,5 +336,84 @@ footer{
     justify-content: space-between;
     margin-top: 153px;
     margin-bottom: 40px;
+}
+
+.sideLogos {
+    margin: 30px;
+    
+    margin-right: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: auto;
+}
+
+.logo-1 {
+    width: 146px;
+}
+
+.logo-2 {
+    width: 24px;
+}
+
+.navContainer {
+    margin-top: 106px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navContainer li {
+    padding-bottom: 21px;
+}
+
+.navContainer a {
+    color: #FFFFFF;
+    padding: 16px 24px;
+    
+}
+
+.navContainer a:hover {
+    background-color: #FF2288;
+    border-radius: 12px;
+}
+
+.followingWrapper {
+    margin-top: 89px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.followingWrapper h4 {
+    padding-bottom: 31px;
+    color: #FFFFFF;
+    text-align: left;
+    font-size: 12px;
+    padding-left: 24px;
+}
+
+.followingWrapper li {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-bottom: 15px;
+    padding-left: 24px;
+}
+
+.followingWrapper li a {
+    padding-left: 21px;
+    text-align: left;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+.followingWrapper p a {
+    padding-top: 19px;
+    padding-left: 24px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #FFFFFF;
 }
  
