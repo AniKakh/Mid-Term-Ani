@@ -4,7 +4,18 @@
     box-sizing: border-box !important;
   }
 
-
+  @font-face {
+    font-family: 'avenir_book';
+    src: url(fonts/avenirltstd-book-webfont.woff) format('woff');
+}
+@font-face {
+    font-family: 'avenir_black';
+    src: url(fonts/avenirltstd-black-webfont.woff) format('woff');
+}
+@font-face {
+    font-family: 'avenir_roman';
+    src: url(fonts/avenirltstd-roman-webfont.woff) format('woff');
+}
 
  ul {
      list-style: none;
@@ -20,28 +31,28 @@
     margin: auto;
     display: grid;
   grid-template-columns: 270px 1fr;
-  grid-template-rows: 10% 90%;
+  grid-template-rows: 8% 70%;
   grid-template-areas: 
         "sideBar header" 
          "sideBar mainContent"
+         "sideBar sheet0"
          "sideBar footer";
   }
   
   .sideBar {
     grid-area: sideBar;
-  background-color: #222222;
-  color: #ffffff;
+    background-color: #222222;
+    color: #ffffff;
 
   }
   
   header {
     grid-area: header;
-    margin: 30px 30px;
+    margin: 30px 30px 0px;
     border-bottom: 1px solid #F2F2F2;
-    padding-bottom: 40px;
-    height: 86px;
-
   }
+
+
 
   .footer {
       grid-area: footer;
@@ -63,8 +74,61 @@
 }
 
 .mainNav .searchbarContainer {
-    float: left;
+    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: stretch;
+      
 }
+
+.searchform {
+    color: #555;
+    display: flex;
+    padding: 2px;
+    border: 1px solid currentColor;
+    border-radius: 5px;
+    margin: 0 0 30px;
+  }
+  
+  input[type="search"] {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 7px 8px;
+    font-size: 14px;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+  }
+  
+  input[type="search"]::placeholder {
+    color: #bbb;
+  }
+  
+  .submitButton[type="submit"] {
+    text-indent: -999px;
+    overflow: hidden;
+    width: 40px;
+    padding: 0;
+    margin: 0;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: url(images/Component\ 9\ –\ 4.svg) no-repeat center;
+    cursor: pointer;
+    opacity: 0.7;
+  }
+  
+ .submitButton[type="submit"]:hover {
+    opacity: 1;
+  }
+  
+  
+  input[type="search"]:focus {
+    box-shadow: 0 0 3px 0 #FF2288;
+    border-color: #FF2288;
+    outline: none;
+  }
 
 .mainNav input[type=text] {
     padding: 6px;
@@ -81,6 +145,7 @@
     font-size: 17px;
     cursor: pointer;
   }
+
 
   .mainNav .searchbarContainer button:hover {
     background: #F8F8F8;
@@ -109,6 +174,7 @@
   .rightContainer p {
     color: #FF2288;
     margin-right: 35px;
+    font-family: "avenir_book";
   }
 
   .goPro {
@@ -139,35 +205,34 @@
   flex-wrap: wrap;
   }
 
-  .sub-menu{
-    grid-area: sub-menu;
+  .cardsMenu{
+    grid-area: cardsMenu;
     max-width: 1231px;
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
 }
 
-.sub{
+.menuUl{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
 
-.sub ul{
+.menuUl ul{
     display: flex;
 }
 
-.sub li{
+.menuUl li{
     padding: 15px;
 }
 
-.sub a{
+.menuUl a{
     color: #222222;
 }
 
-.sub li:hover{
+.menuUlub li:hover{
     width: auto;
     height: 40px;
     background-color: #F2F2F2;
@@ -215,6 +280,10 @@
     position: relative;
 }
 
+.cards {
+    position: relative;
+}
+
 .icon{
     position: absolute;
     top: 30px;
@@ -241,11 +310,11 @@
     background-color: #FFFFFF;
 }
 
-.project:hover .icon{
+.cards:hover .icon{
     display: block;
 }
 
-.project:hover .icon-2{
+.cards:hover .icon-2{
     display: block;
 }
 
@@ -280,6 +349,7 @@
 } 
 
 .designer-title h2{
+    font-family: "avenir_book";
     padding-left: 54px;
     margin-bottom: 54px;
 }
@@ -308,10 +378,12 @@
 }
 
 .designers h5, h6{
+    font-family: "avenir_book";
     padding-top: 10px;
 }
 
 .designers h6{
+    font-family: "avenir_book";
     padding-bottom: 17px;
     opacity: 0.6;
 }
@@ -325,13 +397,14 @@
 
 
 .navContainer {
-    margin-top: 106px;
+    margin-top: 86px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .navContainer li {
+    font-family: "avenir_book";
     padding-bottom: 21px;
 }
 
@@ -354,6 +427,7 @@
 }
 
 .followingWrapper h4 {
+    font-family: "avenir_book";
     padding-bottom: 31px;
     color: #FFFFFF;
     text-align: left;
@@ -362,6 +436,7 @@
 }
 
 .followingWrapper li {
+    font-family: "avenir_book";
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -378,6 +453,7 @@
 }
 
 .followingWrapper p a {
+    font-family: "avenir_book";
     padding-top: 19px;
     padding-left: 24px;
     font-size: 14px;
@@ -401,6 +477,11 @@
     margin: 2rem 0;
 }
 
+.cards p {
+    font-size: 12px;
+    font-family: "avenir_book";
+}
+
 .cards img {
     width: 100%;
     object-fit: cover;
@@ -417,30 +498,54 @@
    display: flex;
    flex-direction: row;
    justify-content: center;
-    
+  
 }
 
 .footContainer-1 ul {
     margin: 0 auto;
+    
+}
+
+.footContainer-1 ul h5 {
+    text-align: left;
+    font-size: 16px;
+}
+
+.footContainer-1 ul li {
+    padding-bottom: 10px;
+    padding-top: 10px;
+    text-align: left;
 }
 
 .socialContainer {
+    width: 90%;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
+align-items: center;
 }
 
-table {
-  width: 90%;
-  height: 100vh;
-  margin-left: auto 0;
-}
 
-tbody {
-  
-}
 
-tr,th {
+/* second page starts here */
+
+.sheet0 {
+    grid-area: sheet0;
+    max-width: 1231px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 130px;
+  }
+
+  table {
+    width: 90%;
+    height: 100vh;
+    margin-left: auto 0;
+  }
+
+  tr,th {
     text-align: left;
     padding: 15px;
 }
@@ -458,5 +563,49 @@ tr:nth-child(odd):hover {
     background-color: #f2f2f2;
     color: #222222;
 }
+
+tr:nth-child(8) {
+    color: #ff2288;
+}
+
+/* second page ends here */
+
+/* Mobile versions starts here */
+
+@media (max-width: 860px) {
+ .cardsWrapper {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .cards {
+     width: 400px;
+ }
+
+ .cards p {
+     font-size: 1.5rem;
+ }
+
+ .filter {
+     display: none;
+ }
+
+ .sideBar {
+     width: 150px;
+}
+
+.sideLogos {
+    display: none;
+}
+
+}
+
+@media (max-width: 420px) {
+
+}
+
+/* Mobile versions ends here */
+
+
 
  
