@@ -30,7 +30,7 @@
     width: 100%;
     margin: auto;
     display: grid;
-  grid-template-columns: 270px 1fr;
+  grid-template-columns: 1fr 4fr;
   grid-template-rows: 8% 70%;
   grid-template-areas: 
         "sideBar header" 
@@ -340,7 +340,7 @@
 }
 
 .designer-title{
-    margin: auto 0;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -393,6 +393,7 @@
     height: 44px;
     border: 1px solid #D8D8D8;
     border-radius: 12px;
+    cursor: pointer;
 }
 
 
@@ -403,9 +404,17 @@
     align-items: center;
 }
 
+
+
 .navContainer li {
+    display: flex;
+    align-items: center;
     font-family: "avenir_book";
     padding-bottom: 21px;
+}
+
+.navContainer img {
+    width: 24px;
 }
 
 .navContainer a {
@@ -544,7 +553,9 @@ align-items: center;
     margin-left: auto 0;
   }
 
-  tr,th {
+ 
+
+  tr,thead {
     text-align: left;
     padding: 15px;
 }
@@ -572,36 +583,119 @@ tr:nth-child(8) {
 /* Mobile versions starts here */
 
 @media (max-width: 860px) {
- .cardsWrapper {
-     display: flex;
-     flex-direction: column;
- }
 
- .cards {
-     width: 400px;
- }
-
- .cards p {
-     font-size: 1.5rem;
- }
-
- .filter {
-     display: none;
- }
-
- .sideBar {
-     width: 150px;
+.mainContainer {
+    display: grid;
+    margin: auto 0;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas: 
+    'sideBar header'
+    'sideBar mainContent'
+    'sideBar footer';
 }
 
-.sideLogos {
+.mainNav {
+    margin: auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainNav .button {
     display: none;
 }
+
+.top-designers {
+    display: none;
+}
+
+.menuUl ul {
+    display: none;
+}
+
 
 }
 
 @media (max-width: 420px) {
+    .mainContainer {
+        display: flex;
+        flex-direction: column;
+    }
 
-}
+    .sideBar {
+        display: none;
+    }
+
+    .mainNav {
+        margin: auto 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .mainNav .button {
+        display: none;
+    }
+    
+    .top-designers {
+        display: none;
+    }
+    
+    .menuUl ul {
+        display: none;
+    }
+
+    .cardsWrapper {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .cards {
+        width: 80%;
+    }
+
+    .footContainer-1 {
+        display: none;
+    }
+
+    .socialContainer {
+        margin-top: 20px;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .social-Icons {
+        margin-right: 20px;
+    }
+
+    .menuUl {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    tr {
+         display: flex;
+         flex-direction: row;      
+        }
+
+        td {
+            padding: 20px;
+        } 
+        
+        thead {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        th {
+           padding: 20px;
+        }
+     
+ }
 
 /* Mobile versions ends here */
 
